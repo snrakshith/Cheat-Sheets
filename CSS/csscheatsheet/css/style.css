@@ -1,0 +1,262 @@
+/* ------------------Note's------------------------ */ 
+
+/* 
+	id's are unique and used for static purposes
+*/ 
+
+/*
+ classes are re-used for dynamic purposes 
+	 And to target a class we use .(dot) 
+*/ 
+
+/* Margin and Padding are used for Spacing around an element, we use BOX MODEL*/
+
+/* */ 
+
+/* It is called as Reset!! */ 
+/*
+*{
+	margin:0;
+	padding:0;
+}
+*/
+
+/*
+ 3 Methods For Adding CSS
+	. Inline CSS <Directly in HTML>
+	. Internal CSS <Using <style> tag in HTML>
+	. External CSS <Linking an external .css file>
+*/ 
+
+
+/* ------------------------------------------------ */ 
+
+body{
+	background-color:#f4f4f4;
+	color:#555555;
+	
+	/*We have 2 types of fonts:
+		1. Web Safe
+		2. Special Fonts
+	*/ 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:normal;/* Value can be number(400) , (bold)*/
+	
+	/* Same as above */
+	font: normal 16px Arial, Helvetica, sans-serif;
+	
+	/* em is a unit of measurement in css */
+	/* we can also use px (pixel) is a unit of measurement in css */
+	line-height:1.6em;
+	margin:0;
+}
+
+/* It is a global style to the links, which applies to any link on the page. */
+a{
+	text-decoration: none;
+	color:#000;
+}
+
+
+/* The link has an hover state. */
+a:hover{
+	color:red;
+}
+
+/* The link has an active state, when clicked on it. */
+a:active{
+	color:green;
+}
+
+/* 
+	All the previously visited links will have yellow color,
+	and the un-clicked Links would have default colors.
+*/
+a:visited{
+	color:yellow;
+}
+
+.container{
+	width:80%; /* we can also use pixels (960 px) is popular,
+				  we should use % for most of the time.*/
+	margin:auto; /* puts even amount of margin on both the side's */
+}
+
+/* Adding a global style to button */
+.button{
+	background-color:#333;
+	color:#fff;
+	padding:10px 15px;
+	border:none;
+}
+
+.button:hover{
+	background:red;
+	color:#fff;
+}
+
+/* In order to clear any Floats around it, in this case it is above. */
+.clr{
+	clear:both;
+}
+
+/* Demonstrating a BOX MODEL */
+.box-1{
+	background-color:#333;
+	color:#fff;
+
+	border-right:5px red solid; /* PROPERTY : <Size> <Color> <Type> */
+	border-left:5px red solid;
+	border-top:5px red solid;
+	border-bottom:5px red solid;
+	border-width:3px;
+	border-bottom-width:10px;
+	border-top-style:dotted;
+
+	/* same as above */
+	border: 5px red solid; 
+
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-right:20px;
+	padding-left:20px;
+
+	/* Same as above */
+	padding:20px;
+
+	margin-top:20px;
+	margin:20px 0;
+}
+
+/* DEMONSTRATION OF Text Formating Styles */
+
+.box-1 h1{
+	font-family:Tahoma;
+	font-weight:800;
+	font-style:italic;
+	text-decoration:underline;
+	text-transform:uppercase;
+	letter-spacing: 0.2em;
+	word-spacing: 1em;
+}
+
+.box-2{
+	border:3px dotted #ccc;
+	padding:20px;
+	margin:20px 0;
+}
+
+.categories{
+	border:1px #ccc solid;
+	padding:10px;
+	border-radius:15px; /* For curved Edges */
+}
+
+.categories h2{
+	text-align:center;
+}
+
+.categories ul{
+	padding:0;
+	padding-left:20px;
+	list-style:square; /* example: . content */
+	list-style:none;   /* example:   content */
+}
+
+.categories li{
+	padding-bottom:6px;
+	border-bottom:dotted 1px #333;
+	list-style-image: url('../images/check.png');
+}
+
+/* Styling for the Form */
+.my-form{
+	padding:20px;
+}
+
+.my-form .form-group{
+	padding-bottom:15px;
+}
+
+.my-form label{
+	display:block;
+}
+
+/* In order to target the particular type [ text ] */
+/* Adding two targets off ( input and textarea ) */
+.my-form input[type="text"], .my-form textarea{
+	padding:8px;
+	width:100%;
+}
+
+/* For the content which needs to be displayed as 3  Equal Component's*/
+.block{
+	float:left;
+	width:33.3%;
+	border:1px solid #ccc;
+	padding:10px;
+	box-sizing:border-box;
+}
+
+#main-block{
+	float:left;
+	width:70%;
+	padding:15px;
+	box-sizing: border-box;
+}
+
+#sidebar{
+	float:right;
+	width:30%;
+	background-color:#333;
+	color:#fff;
+	padding:15px;
+	box-sizing: border-box;
+}
+
+.p-box{
+	width:800px;
+	height:500px;
+	border:1px solid #000;
+	margin-top:30px;
+	position:relative;
+	background-image:url('../images/bgimage.jpg');
+	background-repeat: no-repeat;
+	background-position:100px 200px;
+	background-position:center top;
+}
+
+.p-box h1{
+	position:absolute;
+	top:100px;
+	left:200px;
+}
+
+.p-box h2{
+	position:absolute;
+	bottom:40px;
+	right:100px;
+}
+
+.fix-me{
+	position:fixed;
+	top:400px;
+}
+
+.my-list li:first-child{
+	background: red;
+}
+
+.my-list li:last-child{
+	background: blue;
+}
+
+.my-list li:nth-child(5){
+	background: yellow;
+}
+
+.my-list li:nth-child(even){
+	background: grey;
+}
+
